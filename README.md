@@ -1,14 +1,14 @@
 
-# Kickstarter Success Prediction
+# Predicting Kickstarter Success
 
 In this predictive analytics project, I've developed a model to predict the success or failure of a given Kickstarter fundraising campaign using a gradient boosted random forest classifier
 
 ## Context & Summary of Results
 [Kickstarter](https://www.kickstarter.com/about) is a crowdfunding platform with a focus on bringing creative projects to life.
 
-As part of a data mining course, I was tasked with developing a classification model which would be evaluated solely on the accuracy of its predictions on a completely unseen dataset. The model could only use attributes which would be known at the time a project is published on the platform. 
+As part of a data mining course, I was tasked with developing a classification model which would be evaluated solely on the accuracy of its predictions on an unseen dataset. The model could only use attributes which would be known at the time a project is published on the platform. 
 
-Upon evaluation, my final CV score was 72.1% - near the average of 72.5% across 84 analytics students. During my own model creation process, I achieved ~72% accuracy during training and ~73% accuracy on a test set. Overall, this demonstrated the appropriate balance between bias and variance that is characteristic of a stable and generalizable model. 
+Upon evaluation, my final CV score was 72.1% - near the average of 72.5% across 84 analytics students. The maximum accuracy achieved was 76.6%. During my own model creation process, I achieved ~72% accuracy during training and ~73% accuracy on a test set. Overall, this demonstrated the appropriate balance between bias and variance that is characteristic of a stable and generalizable model. 
 
 
 ## Process
