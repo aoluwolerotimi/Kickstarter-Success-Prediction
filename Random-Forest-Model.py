@@ -11,7 +11,7 @@ from sklearn.metrics import accuracy_score
 ### PREPROCESSING ###
 
 # Importing the dataset
-dataset = pd.read_excel('/Users/aoluwolerotimi/Datasets/Kickstarter.xlsx') # Change this to your local path
+dataset = pd.read_excel('Kickstarter.xlsx') # Change this to your local path
 
 df = dataset.copy()
 # Preserve only the two states of interest for the model 
@@ -153,7 +153,7 @@ best_gbt.fit(X_mapped, y)
 ### PREPROCESSING ###
 
 # Importing the dataset
-dataset2 = pd.read_excel('/Users/aoluwolerotimi/Datasets/Kickstarter-Grading-Sample.xlsx')
+dataset2 = pd.read_excel('Kickstarter-Test-Set.xlsx')
 
 df2 = dataset.copy()
 df2 = df2[df2['state'].isin(['failed', 'successful'])]
