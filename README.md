@@ -16,14 +16,18 @@ At a high level, these are the steps I took in developing this model. This repo 
 
 #### Preprocessing
 * Removed irrelevant variables, including IDs, time stamps, and variables not known at project publication (e.g., staff pick)
-* Computed a new 'goal_usd' variable which expressed the goal in the same currency as other key monetary variables 
+* Computed a new 'goal_usd' variable which expressed the goal in the same currency as other key monetary variables
+* Binned categorical variabels with many unique values according to domain knowledge
 * Eliminated multicollinearity among variables
 * Eliminated outliers in terms of fundraising goal and days from project creation to project publishing on the platform
 
 #### Feature Selection
-
+* Used Random Forest feature importance scores to guide initial feature selection
+* Noting low feature importance for most categorical variables, used binning to reduce the number of unique values and enhanced their importance in the model
+* The variable for deadline year met the feature importance score threshold but was later dropped due it observed negative impact on model accuracy
 
 #### Model Selection & Hyperparameter Tuning
-
-
+* Tested bagged random forest, gradient-boosted random forest, and artificial neural network models on the selected features
+* Selected gradient-boosted random forest as it achieved the highest accuracy score in k-fold cv tests
+* From GridsearchCV, the best parameters were identified as a 0.05 learning rate, a max depth of 3, a minimum of 2 samples per leaf node, and 100 trees
 
